@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>La mia App di Consigli 🚀</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            background: white;
+            color: #764ba2;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generatore di Idee 💡</h1>
+        <p id="testo">Clicca il tasto per un consiglio...</p>
+        <button onclick="cambia()">Nuova Idea</button>
+    </div>
+    <script>
+        function cambia() {
+            const frasi = [
+                "Studia poco ma bene!",
+                "Il codice è poesia.",
+                "Non mollare mai!",
+                "Fai una pausa caffè.",
+                "Sbagliare serve a imparare."
+            ];
+            const scelta = frasi[Math.floor(Math.random() * frasi.length)];
+            document.getElementById("testo").innerText = scelta;
+        }
+    </script>
+</body>
+</html>
